@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+from DVBTDemultiplex import DVBTDemultiplex
+import sys
+__author__ = 'Jakub Pelikan'
+
+if __name__ == "__main__":
+    try:
+        dec = DVBTDemultiplex()
+        dec.readFile(sys.argv[1])
+    except IndexError:
+        print('Please set TS file')
